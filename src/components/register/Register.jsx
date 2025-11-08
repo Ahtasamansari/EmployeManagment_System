@@ -4,8 +4,8 @@ import "./register.css";
 import { registerUser } from "../services/authentication";
 
 export default function Register() {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const handleSubmit = async e => {
     e.preventDefault();

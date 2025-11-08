@@ -11,12 +11,12 @@ export default function UpdateEmp() {
     const { state } = useLocation()
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState();
-    const [age, setAge] = useState();
+    const [phone, setPhone] = useState("");
+    const [age, setAge] = useState("");
     const [address, setAddress] = useState("");
     const [dept, setDept] = useState("");
     const [empType, setEmpType] = useState("");
-    const [salary, setSalary] = useState();
+    const [salary, setSalary] = useState("");
     const [message, setMessage] = useState({ error: false, msg: "" });
 
     useEffect(() => {

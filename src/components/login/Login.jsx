@@ -3,10 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 import { loginUser } from "../services/authentication";
 // import context from "react-bootstrap/esm/AccordionContext";
-import { myContext } from "../../../context/MyContext";
+import { MyContext } from "../../../context/my-context";
 
 export default function Login() {
-  const { user, setUser } = useContext(myContext);
+  const { setUser } = useContext(MyContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ export default function Login() {
     try {
       const res = await loginUser(email, password);
       setUser(res);
-      if (user) navigate("/");
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
