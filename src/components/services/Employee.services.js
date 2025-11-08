@@ -1,5 +1,5 @@
 import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from "firebase/firestore";
-import { db } from "../../../config/firebase-config";
+import { db } from "../../../config/fireBase-config";
 
 // Get the collcetion reference from DB...
 const employeeCollectionRef = collection(db, "Employees")

@@ -1,4 +1,4 @@
-import { app } from "../../../config/firebase-config";
+import { app } from "../../../config/fireBase-config";
 import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 const auth = getAuth(app);
@@ -45,7 +45,7 @@ export const loginUser = async (email, password) => {
 // sign out a user
 export const logoutUser = async () => {
     try {
-        const isSignOut = await signOut(auth)
+        await signOut(auth)
         console.log("Signed out successfully..")
     }
     catch (err) {
